@@ -123,9 +123,10 @@ namespace Lab3
         public double Task5(int a, int n)
         {
             double luck = 0;
+            int b = a;
 
             // code here
-            for (; a <= a+n; a++)
+            for (; a < b+n; a++)
             {
                 switch (a)
                 {
@@ -134,9 +135,10 @@ namespace Lab3
                     case 15:
                     case 22:
                     case 29:
-                        if (luck * 1.5 <= 100)
+                        luck *= 1.5;
+                        if (luck > 100)
                         {
-                            luck *= 1.5;
+                            luck = 100;
                         }
                         break;
 
