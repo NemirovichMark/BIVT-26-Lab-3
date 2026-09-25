@@ -14,7 +14,7 @@ namespace Lab3
             {
                 int x = Convert.ToInt32(Console.ReadLine());
                 int y = Convert.ToInt32(Console.ReadLine());
-                double dist = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
+                double dist = Math.Sqrt(x*x + y*y);
                 if (r1 <= dist && dist <= r2)
                 {
                     count++;
@@ -33,15 +33,15 @@ namespace Lab3
             // code here
             for (int i = 0; i < n; i++)
             {
-                for (int k = 0; k < 4; k++)
+                int mark1 = Convert.ToInt32(Console.ReadLine());
+                int mark2 = Convert.ToInt32(Console.ReadLine());
+                int mark3 = Convert.ToInt32(Console.ReadLine());
+                int mark4 = Convert.ToInt32(Console.ReadLine());
+                if (mark1 == 2 || mark2 == 2 || mark3 == 2 || mark4 == 2)
                 {
-                    int mark = Convert.ToInt32(Console.ReadLine());
-                    average += mark;
-                    if (mark == 2)
-                    {
-                        count++;
-                    }
+                    count++;
                 }
+                average += mark1 + mark2 + mark3 + mark4;
             }
             average /= n;
             // end
@@ -85,21 +85,30 @@ namespace Lab3
             int attempts = 0;
 
             // code here
-            do
+            while (true)
             {
                 string fullCode = "";
-                for (int i = 0; i < 3; i++)
+                Console.WriteLine("Введите число:");
+                string givenCode1 = Console.ReadLine();
+                if (givenCode1 == "-1")
                 {
-                    Console.WriteLine("Введите число:");
-                    string givenCode = Console.ReadLine();
-                    fullCode += givenCode;
-
-                    if (givenCode == "-1")
-                    {
-                        solution = "Аварийный выход!";
-                        break;
-                    }
+                    solution = "Аварийный выход!";
+                    break;
                 }
+                string givenCode2 = Console.ReadLine();
+                if (givenCode2 == "-1")
+                {
+                    solution = "Аварийный выход!";
+                    break;
+                }
+                string givenCode3 = Console.ReadLine();
+                if (givenCode3 == "-1")
+                {
+                    solution = "Аварийный выход!";
+                    break;
+                }
+                fullCode += givenCode1 + givenCode2 + givenCode3;
+
                 attempts++;
                 if (solution == "Аварийный выход!")
                 {
@@ -115,7 +124,7 @@ namespace Lab3
                     solution = "Система заблокирована!";
                     break;
                 }
-            } while (attempts < limit || solution != "Аварийный выход!");
+            }
             // end
 
             return (solution, attempts);
