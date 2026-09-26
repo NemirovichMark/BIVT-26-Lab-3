@@ -1,4 +1,4 @@
-﻿namespace Lab3
+namespace Lab3
 {
     public class Green
     {
@@ -7,7 +7,17 @@
             int count = 0;
 
             // code here
+            for (int i = 0; i < n; i++)
+            {
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
+                double d = Math.Abs(Math.Pow(x - a, 2)) + Math.Abs(Math.Pow(y - b, 2));
 
+                if (d <= r * r)
+                {
+                    count++;
+                }
+            }
             // end
 
             return count;
@@ -18,7 +28,23 @@
             double length = 0;
 
             // code here
-
+            int a = 0;
+            int b = 0;
+            double min = 99999999999999999999999999999999999999999999.0;
+            int indexT = 0;
+            for (int i = 0; i < n; i++)
+            {
+                indexT += 1;
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
+                double d = Math.Sqrt(Math.Abs(Math.Pow(x - a, 2)) + Math.Abs(Math.Pow(y - b, 2)));
+                if (d < min)
+                {
+                    min = d;
+                    length = d;
+                    index = indexT;
+                }
+            }
             // end
 
             return (index, length);
@@ -28,7 +54,7 @@
             int count = 0;
 
             // code here
-
+            
             // end
 
             return count;
@@ -38,7 +64,20 @@
             int score = 0;
 
             // code here
-
+            while (labs > 0 || cw > 0)
+            {
+                int mark = int.Parse(Console.ReadLine());
+                if (labs > 0)
+                {
+                    score += mark;
+                    labs -= 1;
+                }
+                else
+                {
+                    score += 4 * mark;
+                    cw -= 1;
+                }
+            }
             // end
 
             return score;
@@ -48,7 +87,18 @@
             double area = 0;
 
             // code here
-
+            if (type == 1)
+            {
+                area = a * b;
+            }
+            else if (type == 2)
+            {
+                area = Math.PI * (a * a - b * b);
+            }
+            else
+            {
+                area = (a + b) / 2;
+            }
             // end
 
             return area;
