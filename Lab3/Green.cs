@@ -11,7 +11,7 @@ namespace Lab3
             {
                 double x = double.Parse(Console.ReadLine());
                 double y = double.Parse(Console.ReadLine());
-                double d = Math.Abs(Math.Pow(x - a, 2)) + Math.Abs(Math.Pow(y - b, 2));
+                double d = Math.Abs((x - a) * (x - a)) + Math.Abs((y - b) * (y - b));
 
                 if (d <= r * r)
                 {
@@ -30,21 +30,26 @@ namespace Lab3
             // code here
             int a = 0;
             int b = 0;
-            double min = 99999999999999999999999999999999999999999999.0;
-            int indexT = 0;
-            for (int i = 0; i < n; i++)
-            {
-                indexT += 1;
-                double x = double.Parse(Console.ReadLine());
-                double y = double.Parse(Console.ReadLine());
-                double d = Math.Sqrt(Math.Abs(Math.Pow(x - a, 2)) + Math.Abs(Math.Pow(y - b, 2)));
-                if (d < min)
+            if ( n > 0) {
+                double x1 = double.Parse(Console.ReadLine());
+                double y1 = double.Parse(Console.ReadLine());
+                double min = Math.Sqrt(Math.Abs((x1 - a) * (x1 - a)) + Math.Abs((y1 - b) * (y1 - b)));
+                int indexT = 0;
+                for (int i = 1; i < n; i++)
                 {
-                    min = d;
-                    length = d;
-                    index = indexT;
+                    indexT += 1;
+                    double x = double.Parse(Console.ReadLine());
+                    double y = double.Parse(Console.ReadLine());
+                    double d = Math.Sqrt(Math.Abs((x - a) * (x - a)) + Math.Abs((y - b) * (y - b)));
+                    if (d < min)
+                    {
+                        min = d;
+                        length = d;
+                        index = indexT;
+                    }
                 }
             }
+            else {index = 0; length = 0;}
             // end
 
             return (index, length);
@@ -113,7 +118,8 @@ namespace Lab3
             }
             else
             {
-                area = (a + b) / 2;
+                double h = Math.Sqrt((b * b) - ((a / 2) * (a / 2)));
+                area = (h * a) / 2;
             }
             // end
 
