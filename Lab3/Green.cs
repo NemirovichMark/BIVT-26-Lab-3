@@ -54,7 +54,23 @@ namespace Lab3
             int count = 0;
 
             // code here
-            
+            while (true)
+            {
+                string x = Console.ReadLine();
+                if (!double.TryParse(x, out double resX))
+                {
+                    break;
+                }
+                string y = Console.ReadLine();
+                if (!double.TryParse(x, out double resY))
+                {
+                    break;
+                }
+                if (resX >= 0 && resX <= Math.PI && resY >= 0 && resY <= Math.Sin(resX))
+                {
+                    count++;
+                }
+            }
             // end
 
             return count;
