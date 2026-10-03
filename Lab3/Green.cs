@@ -35,6 +35,8 @@ namespace Lab3
                 double y1 = double.Parse(Console.ReadLine());
                 double min = Math.Sqrt(Math.Abs((x1 - a) * (x1 - a)) + Math.Abs((y1 - b) * (y1 - b)));
                 int indexT = 0;
+                index = indexT;
+                length = min;
                 for (int i = 1; i < n; i++)
                 {
                     indexT += 1;
