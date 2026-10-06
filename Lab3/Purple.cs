@@ -7,9 +7,19 @@ namespace Lab3
         public int Task1(int n, int r1, int r2)
         {
             int count = 0;
-
+            double dst = 0;
             // code here
-
+            while (n>0) {
+                Console.WriteLine("Введите X, Y");
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
+                dst = Math.Sqrt(x * x + y * y);
+                if(dst> r1 && dst < r2)
+                {
+                    count++;
+                }
+                n--;
+            }
             // end
 
             return count;
@@ -20,7 +30,25 @@ namespace Lab3
             double average = 0;
 
             // code here
-
+            for (int i = 0; i < n; i++)
+            {
+                int f = 0;
+                for (int j = 0; j < 4; j++) {
+                    //Console.WriteLine(i);
+                    int grade = int.Parse(Console.ReadLine());
+                    average += grade;
+                    if (grade == 2)
+                    {
+                        f = 1;
+                    }
+                }
+                count+=f;
+            }
+            if (n != 0)
+            {
+                average /= (n*4);
+            }
+            Console.WriteLine($"c {count} a {average}");
             // end
 
             return (count, average);
