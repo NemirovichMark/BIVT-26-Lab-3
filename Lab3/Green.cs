@@ -110,18 +110,25 @@ namespace Lab3
             double area = 0;
 
             // code here
-            if (type == 1)
+            switch (type)
             {
-                area = a * b;
-            }
-            else if (type == 2)
-            {
-                area = Math.PI * (a * a - b * b);
-            }
-            else
-            {
-                double h = Math.Sqrt((b * b) - ((a / 2) * (a / 2)));
-                area = (h * a) / 2;
+                case 1:
+                    area = a * b;
+                    break;
+                
+                case 2:
+                    area = Math.PI * (a * a - b * b);
+                    break;
+                
+                case 3:
+                    double x = a / 2.0;
+                    double h = Math.Sqrt(b * b - x * x);
+                    area = 0.5 * a * h;
+                    break;
+                
+                default:
+                    area = 0;
+                    break;
             }
             // end
 
