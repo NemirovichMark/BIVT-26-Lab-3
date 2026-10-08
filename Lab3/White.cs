@@ -9,7 +9,15 @@ namespace Lab3
             double averageHeight = 0;
 
             // code here
+      double sum = 0;
 
+            for (int i = 0; i < n; i++)
+            {
+                double height = double.Parse(Console.ReadLine());
+                sum += height;
+            }
+
+            averageHeight = sum / n;
             // end
 
             return averageHeight;
