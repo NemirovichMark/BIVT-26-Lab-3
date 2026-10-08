@@ -11,12 +11,12 @@ namespace Lab3
             // code here
             for (int i = 0; i < n; i++)
             {
-                double x = Convert.ToDouble(Console.ReadLine());
-                double y = Convert.ToDouble(Console.ReadLine());
+                //double x = Convert.ToDouble(Console.ReadLine());
+                //double y = Convert.ToDouble(Console.ReadLine());
                 double dx = x - a;
                 double dy = y - b;
-                double distSq = dx * dx + dy * dy;
-                if (distSq <= r * r) count++;
+                double distSq = dx*dx + dy*dy;
+                if (distSq <= r*r) count++;
             }
             // end
             return count;
@@ -31,9 +31,9 @@ namespace Lab3
             double minDist = double.MaxValue;
             for (int i = 1; i <= n; i++)
             {
-                double x = Convert.ToDouble(Console.ReadLine());
-                double y = Convert.ToDouble(Console.ReadLine());
-                double d = Math.Sqrt(x * x + y * y);
+                //double x = Convert.ToDouble(Console.ReadLine());
+                //double y = Convert.ToDouble(Console.ReadLine());
+                double d = Math.Sqrt(x*x + y*y);
                 if (d < minDist)
                 {
                     minDist = d;
@@ -52,8 +52,8 @@ namespace Lab3
             // code here
             while (true)
             {
-                bool okX = double.TryParse(Console.ReadLine(), out double x);
-                bool okY = double.TryParse(Console.ReadLine(), out double y);
+                //bool okX = double.TryParse(Console.ReadLine(), out double x);
+                //bool okY = double.TryParse(Console.ReadLine(), out double y);
                 if (!okX || !okY) break;
                 if (x >= 0 && x <= Math.PI && y >= 0 && y <= Math.Sin(x))
                     count++;
@@ -69,7 +69,7 @@ namespace Lab3
             // code here
             while (labs > 0 || cw > 0)
             {
-                int mark = Convert.ToInt32(Console.ReadLine());
+                //int mark = Convert.ToInt32(Console.ReadLine());
                 if (labs > 0)
                 {
                     score += mark;
@@ -98,10 +98,10 @@ namespace Lab3
                 case 2:
                     double R = Math.Max(a, b);
                     double r = Math.Min(a, b);
-                    answer = Math.PI * (R * R - r * r);
+                    answer = Math.PI * (R*R - r*r);
                     break;
                 case 3:
-                    double h = Math.Sqrt(b * b - (a / 2.0) * (a / 2.0));
+                    double h = Math.Sqrt(b*b - (a/2.0)*(a/2.0));
                     answer = 0.5 * a * h;
                     break;
                 default:
