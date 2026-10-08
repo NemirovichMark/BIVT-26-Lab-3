@@ -117,7 +117,7 @@ namespace Lab3
                     break;
                 
                 case 2:
-                    area = Math.PI * (a * a - b * b);
+                    area = Math.PI * Math.Abs(a * a - b * b);
                     break;
                 
                 case 3:
