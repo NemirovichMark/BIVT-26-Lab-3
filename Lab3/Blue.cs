@@ -70,26 +70,26 @@
             int count = 0;
 
             // code here
-            for (int i = 0; i < n; i++)
+            int gm = 0;
+            for (int i = 0; i < n*4; i++)
             {
-                int sm = 0;
-                for (int i1 = 0; i1 < 4; i1++)
-                {
-                    var value = Console.ReadLine();
-                    int mark = 0;
-                    if (value != null)
-                        mark = int.Parse(value);
-                    if (mark > 3)
-                    {
-                        sm++;
-                    }
-
-                    if (sm == 4)
-                    {
-                        count++;
-                    }
-                }
                 
+                var value = Console.ReadLine();
+                int mark = 0;
+                if (value != null)
+                    mark = int.Parse(value);
+                if (mark > 3)
+                {
+                    gm++;
+                }
+
+                if (gm == 4)
+                {
+                    count++;
+                }
+
+                gm = 0;
+
 
             }
             // end
