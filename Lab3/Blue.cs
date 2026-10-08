@@ -7,6 +7,7 @@ namespace Lab3
             double milk = 0;
 
             // code here
+
             double count = 0;
 
             for (int i = 1; i <= n; i++)
@@ -18,6 +19,7 @@ namespace Lab3
                 }
                 milk = (count * glass) / 1000.0;
             }
+
             // end
 
             return milk;
@@ -27,6 +29,7 @@ namespace Lab3
             int first = 0, second = 0, third = 0, fourth = 0;
 
             // code here
+
             int i = 0;
 
             while (i < n)
@@ -40,6 +43,7 @@ namespace Lab3
                 if (x > 0 && y < 0) fourth++;
                 i++;
             }
+
             // end
 
             return (first, second, third, fourth);
@@ -50,6 +54,25 @@ namespace Lab3
 
             // code here
 
+            for (int i = 1; i <= n; i++)
+            {
+                bool badmark = false;
+
+                int mark1 = int.Parse(Console.ReadLine());
+                if (mark1 == 2 || mark1 == 3) badmark = true;
+
+                int mark2 = int.Parse(Console.ReadLine());
+                if (mark2 == 2 || mark2 == 3) badmark = true;
+
+                int mark3 = int.Parse(Console.ReadLine());
+                if (mark3 == 2 || mark3 == 3) badmark = true;
+
+                int mark4 = int.Parse(Console.ReadLine());
+                if (mark4 == 2 || mark4 == 3) badmark = true;
+
+                if (!badmark) count++;
+            }
+
             // end
 
             return count;
@@ -58,12 +81,12 @@ namespace Lab3
         {
             int serias = 0;
 
-            // code here
+            // code here 
+
             int seriasTime = 0;
             int taskTime = 10;
-            
 
-            while ( time < 1440)
+            while (time < 1440)
             {
                 if (tasks > 0)
                 {
@@ -71,15 +94,13 @@ namespace Lab3
                     taskTime += 5;
                     tasks--;
                 }
-                else 
-                { 
+                else
+                {
                     seriasTime = int.Parse(Console.ReadLine());
                     time += seriasTime;
                     serias++;
                 }
-
-            }                                                   
-
+            }
 
             // end
 
@@ -89,6 +110,7 @@ namespace Lab3
         {
 
             // code here
+
             switch (number)
             {
                 case 1:
@@ -120,6 +142,7 @@ namespace Lab3
             if (power < 0) power = 0;
             if (agility < 0) agility = 0;
             if (intellect < 0) intellect = 0;
+
             // end
 
             return (power, agility, intellect);
