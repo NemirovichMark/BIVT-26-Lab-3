@@ -47,7 +47,15 @@ for (int i = 0; i < n; i++)
             int count = 0;
 
             // code here
+  for (int i = 0; i < n; i++)
+{
+    double time = double.Parse(Console.ReadLine());
 
+    if (time <= limit)
+    {
+        count++;
+    }
+}
             // end
 
             return count;
