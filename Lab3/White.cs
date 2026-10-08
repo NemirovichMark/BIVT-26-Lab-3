@@ -27,7 +27,17 @@ namespace Lab3
             double bestResult = 0;
 
             // code here
+   bestResult = double.MaxValue;
 
+for (int i = 0; i < n; i++)
+{
+    double time = double.Parse(Console.ReadLine());
+
+    if (time < bestResult)
+    {
+        bestResult = time;
+    }
+}
             // end
 
             return bestResult;
