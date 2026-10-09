@@ -30,12 +30,12 @@
                 double a = Math.Sqrt(x * x + y * y);
                 if (i == 0)
                 {
-                    lenght = a;
+                    length = a;
                     index = 1;
                 }
                 else if (a < length)
                 {
-                    lenght = a;
+                    length = a;
                     index = i + 1;
                 }
             }
@@ -48,17 +48,17 @@
             // code here
             while (true)
             {
-                string x = Console.ReadLine();
-                if (!double.TryParse(x,out double x))
+                string x1 = Console.ReadLine();
+                if (!double.TryParse(x1,out double x1))
                 {
                     break;
                 }
-                string y = Console.ReadLine();
-                if (!double.TryParse(y,out double y))
+                string y1 = Console.ReadLine();
+                if (!double.TryParse(y1,out double y1))
                 {
                     break;
                 }
-                if (x >= 0 && x <= Math.PI && y >= 0 && y <= Math.Sin(x))
+                if (x1 >= 0 && x1 <= Math.PI && y1 >= 0 && y1 <= Math.Sin(x))
                 {
                     count++;
                 }
