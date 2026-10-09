@@ -48,17 +48,17 @@
             // code here
             while (true)
             {
-                string x1 = Console.ReadLine();
-                if (!double.TryParse(x1,out double x1))
+                string ix = Console.ReadLine();
+                if (!double.TryParse(ix,out double ix))
                 {
                     break;
                 }
-                string y1 = Console.ReadLine();
-                if (!double.TryParse(y1,out double y1))
+                string iy = Console.ReadLine();
+                if (!double.TryParse(iy,out double iy))
                 {
                     break;
                 }
-                if (x1 >= 0 && x1 <= Math.PI && y1 >= 0 && y1 <= Math.Sin(x))
+                if (ix >= 0 && ix <= Math.PI && iy >= 0 && iy <= Math.Sin(ix))
                 {
                     count++;
                 }
