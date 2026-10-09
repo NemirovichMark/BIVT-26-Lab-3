@@ -48,13 +48,13 @@
             // code here
             while (true)
             {
-                string inputx = Console.ReadLine();
-                if (!double.TryParse(inputx,out double inputx))
+                string sx = Console.ReadLine();
+                if (!double.TryParse(sx,out double inputx))
                 {
                     break;
                 }
-                string inputy = Console.ReadLine();
-                if (!double.TryParse(inputy,out double inputy))
+                string sy = Console.ReadLine();
+                if (!double.TryParse(sy,out double sy))
                 {
                     break;
                 }
