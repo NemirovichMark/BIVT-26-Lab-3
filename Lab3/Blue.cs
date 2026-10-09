@@ -62,7 +62,22 @@ namespace Lab3
             int serias = 0;
 
             // code here
+            int seriasTime, taskTime = 10;
+            while (time < 24 * 60) {
+                if (tasks > 0)
+                {
+                    time += taskTime;
+                    taskTime += 5;
+                    tasks--;
+                }
+                else {
+                    seriasTime = int.Parse(Console.ReadLine());
+                    time += seriasTime;
+                    serias++;
+                }
 
+                
+            }
             // end
 
             return (tasks, serias);
@@ -71,22 +86,6 @@ namespace Lab3
         {
 
             // code here
-            if (number == 1 || number == 3)
-                power += 10;
-            if (number == 2)
-                agility += 5;
-            if (number == 4)
-                agility += 15;
-            if (number == 5)
-                agility += 7;
-            if (number >= 1 && number <= 3)
-                intellect -= 5;
-            if (number == 5 || number == 2)
-                power -= 5;
-            if (number == 4) {
-                power -= 10;
-                intellect -= 10;
-            }
 
             // end
 
