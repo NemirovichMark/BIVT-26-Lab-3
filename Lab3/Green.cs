@@ -5,11 +5,17 @@
         public double Task1(int a, int b, int r, int n)
         {
             int count = 0;
-
             // code here
-
+            for (int i = 0; i <= n;i++)
+            {
+                double x = double.Parse(Console.Readline());
+                double y = double.Parse(Console.Readline());
+                if ((x - a) * (x - a) + (y - b) * (y - b) <= r * r)
+                {
+                    count++;
+                }
+            }
             // end
-
             return count;
         }
         public (int index, double length) Task2(int n)
