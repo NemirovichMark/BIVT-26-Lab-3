@@ -56,6 +56,18 @@
             int count = 0;
 
             // code here
+            double x, y;
+            while (true)
+            {
+                if (!double.TryParse(Console.ReadLine(),out x))
+                    break;
+                if (!double.TryParse(Console.ReadLine(), out y))
+                    break;
+                if ((x >= 0) && (x <= Math.PI) && (y >= 0) && (y <= Math.Sin(x)))
+                {
+                    count++;
+                }
+            }
 
             // end
 
