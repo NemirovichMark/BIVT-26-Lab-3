@@ -49,12 +49,12 @@
             while (true)
             {
                 string sx = Console.ReadLine();
-                if (!double.TryParse(sx,out double inputx))
+                if (!double.TryParse(sx,out double x))
                 {
                     break;
                 }
                 string sy = Console.ReadLine();
-                if (!double.TryParse(sy,out double sy))
+                if (!double.TryParse(sy,out double y))
                 {
                     break;
                 }
