@@ -56,22 +56,22 @@ namespace Lab3
         public int Task3(int n)
         {
             int count = 0;
-            bool bad = false;
+            bool с = false;
             for (int i = 0; i < n * 4; i++)
             {
                 int mark = int.Parse(Console.ReadLine());
                 if (mark == 2 || mark == 3)
                 {
-                    bad = true;
+                    с = true;
                 }
 
-                if (i % 4 == 3) 
+                if (i % 4 == 3)
                 {
-                    if (!bad)
+                    if (!с)
                     {
                         count++;
                     }
-                    bad = false;
+                    с = false;
                 }
             }
             // end
@@ -84,21 +84,21 @@ namespace Lab3
             int serias = 0;
 
             // code here
-            int seriasTime;
-            int taskTime = 10;
+            int seriasT;
+            int taskT = 10;
 
             while (time < 24 * 60)
             {
                 if (tasks > 0)
                 {
-                    time += taskTime;
-                    taskTime += 5;
+                    time += taskT;
+                    taskT += 5;
                     tasks--;
                 }
                 else
                 {
-                    seriasTime = int.Parse(Console.ReadLine());
-                    time += seriasTime;
+                    seriasT = int.Parse(Console.ReadLine());
+                    time += seriasT;
                     serias++;
                 }
             }
