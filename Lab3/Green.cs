@@ -8,8 +8,8 @@
             // code here
             for (int i = 0; i <= n;i++)
             {
-                double x = double.Parse(Console.Readline());
-                double y = double.Parse(Console.Readline());
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
                 if ((x - a) * (x - a) + (y - b) * (y - b) <= r * r)
                 {
                     count++;
@@ -25,15 +25,15 @@
             // code here
             for (int i = 0; i < n; i++)
             {
-                double x = double.Parse(Console.Readline());
-                double y = double.Parse(Console.Readline());
+                double x = double.Parse(Console.ReadLine());
+                double y = double.Parse(Console.ReadLine());
                 double a = Math.Sqrt(x * x + y * y);
                 if (i == 0)
                 {
                     lenght = a;
                     index = 1;
                 }
-                else if (a < lenght)
+                else if (a < length)
                 {
                     lenght = a;
                     index = i + 1;
@@ -48,12 +48,12 @@
             // code here
             while (true)
             {
-                string x = Console.Readline();
+                string x = Console.ReadLine();
                 if (!double.TryParse(x,out double x))
                 {
                     break;
                 }
-                string y = Console.Readline();
+                string y = Console.ReadLine();
                 if (!double.TryParse(y,out double y))
                 {
                     break;
@@ -72,7 +72,7 @@
             // code here
             while (labs > 0 || cw > 0)
             {
-                int mark = int.Parse(Console.Readline());
+                int mark = int.Parse(Console.ReadLine());
                 if (labs > 0)
                 {
                     score += mark;
