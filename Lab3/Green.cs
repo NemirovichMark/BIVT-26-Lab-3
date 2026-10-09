@@ -23,7 +23,7 @@
             int index = 0;
             double length = 0;
             // code here
-            for (int i - 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
                 double x = double.Parse(Console.Readline());
                 double y = double.Parse(Console.Readline());
@@ -38,7 +38,7 @@
                     lenght = a;
                     index = i + 1;
                 }
-            ]
+            }
             // end
             return (index, length);
         }
