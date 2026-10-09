@@ -48,6 +48,16 @@
             double area = 0;
 
             // code here
+            switch(type)
+            {
+                case 1:
+                    area = a * b; break;
+                case 2:
+                    area = Math.PI * Math.Abs(a * a - b * b); break;
+                case 3:
+                    double h = Math.Sqrt((b * b - (a / 2.0) * (a / 2.0)));
+                    area = (h * a) / 2; break;
+            }
 
             // end
 
