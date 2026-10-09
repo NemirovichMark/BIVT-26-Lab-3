@@ -26,6 +26,26 @@
             double length = 0;
 
             // code here
+            for(int i=0;i<n; i++)
+            {
+                double x, y;
+                double.TryParse(Console.ReadLine(), out x);
+                double.TryParse(Console.ReadLine(), out y);
+                double ln = Math.Sqrt(x * x + y * y);
+                if (i==0)
+                {
+                    length = ln;
+                    index = 1;
+                }
+                else
+                {
+                    if(ln<length)
+                    {
+                        index = i + 1;
+                        length = ln;
+                    }
+                }
+            }
 
             // end
 
