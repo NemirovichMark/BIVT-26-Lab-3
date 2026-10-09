@@ -38,6 +38,21 @@
             int score = 0;
 
             // code here
+             while( labs>0 || cw>0)
+             {
+                 int mark;
+                 int.TryParse(Console.ReadLine(), out mark);
+                 if (labs>0)
+                 {
+                     score += mark;
+                     labs--;
+                 }
+                 else
+                 {
+                     score += 4 * mark;
+                     cw--;
+                 }
+             }
 
             // end
 
