@@ -1,4 +1,4 @@
-﻿namespace Lab3
+namespace Lab3
 {
     public class Blue
     {
@@ -7,17 +7,51 @@
             double milk = 0;
 
             // code here
-
+            for(int i = 0; i < n; i++)
+            {
+                Console.WriteLine("вес ученика: ");
+                bool success = double.TryParse(Console.ReadLine(), out double weight);
+                if (success)
+                {
+                    if (weight < norma)
+                    {
+                        milk+=glass;
+                    }
+                }
+            }
             // end
 
-            return milk;
+            return milk/1000;
         }
         public (int first, int second, int third, int fourth) Task2(int n)
         {
             int first = 0, second = 0, third = 0, fourth = 0;
 
             // code here
+            for(int i = 0; i < n; i++)
+            {
+                Console.WriteLine("напишите координату x: ");
+                int.TryParse(Console.ReadLine(), out int x);
+                Console.WriteLine("напишите координату y: ");
+                int.TryParse(Console.ReadLine(), out int y);
 
+                if (x > 0 && y > 0)
+                {
+                    first++;
+                }
+                else if (x < 0 && y > 0)
+                {
+                    second++;
+                }
+                else if (x < 0 && y < 0)
+                {
+                    third++;
+                }
+                else if (x > 0 && y < 0)
+                {
+                    fourth++;
+                }
+            }
             // end
 
             return (first, second, third, fourth);
@@ -27,7 +61,25 @@
             int count = 0;
 
             // code here
+            for (int i = 0; i < n; i++)
+            {
+                bool has2or3 = false; 
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write($"{j} оценка");
+                    int grade = int.Parse(Console.ReadLine());
 
+                    if (grade == 2 || grade == 3)
+                    {
+                        has2or3 = true;
+                    }
+                }
+
+                if (!has2or3)
+                {
+                    count++;
+                }
+            }
             // end
 
             return count;
@@ -37,6 +89,23 @@
             int serias = 0;
 
             // code here
+            int seriasTime = 10, taskTime = 10;
+            while(time < 60 * 24)
+            {
+                if (tasks > 0)
+                {
+                    time += taskTime;
+                    taskTime += 5;
+                    tasks--;
+
+                }
+                else
+                {
+                    seriasTime = int.Parse(Console.ReadLine());
+                    time += seriasTime;
+                    serias++;
+                }
+            }
 
             // end
 
@@ -46,7 +115,41 @@
         {
 
             // code here
+            switch (number)
+            {
+                case 1:
+                    power += 10;
+                    intellect -= 5;
+                    break;
 
+                case 2:
+                    agility += 10;
+                    power -= 5;
+                    break;
+
+                case 3:
+                    power += 10;
+                    intellect -= 5;
+                    break;
+
+                case 4:
+                    agility += 15;
+                    power -= 10;
+                    intellect -= 10;
+                    break;
+
+                case 5:
+                    intellect += 7;
+                    power -= 5;
+                    break;
+
+                default:
+                    Console.WriteLine("нет такой статуи!");
+                    break;
+            }
+            if (power < 0) power = 0;
+            if (agility < 0) agility = 0;
+            if (intellect < 0) intellect = 0;
             // end
 
             return (power, agility, intellect);
