@@ -7,6 +7,14 @@
             int count = 0;
 
             // code here
+            for(int i=0; i<n;i++)
+            {
+                double x, y;
+                double.TryParse(Console.ReadLine(), out x);
+                double.TryParse(Console.ReadLine(), out y);
+                if (((x - a) * (x - a) + (y - b) * (y - b)) <= r * r)
+                    count++;
+            }
 
             // end
 
