@@ -22,21 +22,32 @@
         {
             int index = 0;
             double length = 0;
-
             // code here
-
+            for (int i - 0; i < n; i++)
+            {
+                double x = double.Parse(Console.Readline());
+                double y = double.Parse(Console.Readline());
+                double a = Math.Sqrt(x * x + y * y);
+                if (i == 0)
+                {
+                    lenght = a;
+                    index = 1;
+                }
+                else if (a < lenght)
+                {
+                    lenght = a;
+                    index = i + 1;
+                }
+            ]
             // end
-
             return (index, length);
         }
         public int Task3()
         {
             int count = 0;
-
             // code here
 
             // end
-
             return count;
         }
         public int Task4(int labs, int cw)
