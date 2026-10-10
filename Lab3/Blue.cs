@@ -67,24 +67,28 @@ namespace Lab3
             // code here
             for (int i = 0; i < n; i++)
             {
-                int countm = 0;
-                for (int i1 = 0; i1 < 4; i1++)
+                int bm = 0;
+                int mark1 = int.Parse(Console.ReadLine());
+                int mark2 = int.Parse(Console.ReadLine());
+                int mark3 = int.Parse(Console.ReadLine());
+                int mark4 = int.Parse(Console.ReadLine());
+                if (mark1 == 2 || mark1 == 3)
                 {
-                    var z = Console.ReadLine();
-                    int mark = 0;
-
-                    if (z != null)
-                    {
-                        mark = int.Parse(z);
-                    }
-
-                    if (mark > 3)
-                    {
-                        countm++;
-                    }
+                    bm++;
                 }
-
-                if (countm == 4)
+                if (mark2 == 2 || mark2 == 3)
+                {
+                    bm++;
+                }
+                if (mark3 == 2 || mark3 == 3)
+                {
+                    bm++;
+                }
+                if (mark4 == 2 || mark4 == 3)
+                {
+                    bm++;
+                }
+                if (bm == 0)
                 {
                     count++;
                 }
