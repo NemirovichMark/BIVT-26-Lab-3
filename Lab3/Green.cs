@@ -118,7 +118,7 @@ namespace Lab3
                     area = (double)a * b;
                     break;
                 case 2: 
-                    area = Math.PI * Math.Abs ((double)a * b - (double)b * b);
+                    area = Math.PI * Math.Abs ((double)a * a - (double)b * b);
                     break;
                 case 3:
                     if (2.0 * b > a && a > 0 && b > 0)
