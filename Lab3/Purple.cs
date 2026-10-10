@@ -133,7 +133,7 @@ namespace Lab3
         {
             double luck = 0;
 
-            for (int i = 0; i < n; i++)
+            for (int a2 = 0; a2 < n; a2++)
             {
                 switch (a)
                 {
