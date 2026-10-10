@@ -7,7 +7,16 @@
             int count = 0;
 
             // code here
+            for (int i = 0; i < n; i++)
+            {
+                double x = Convert.ToDouble(Console.ReadLine());
+                double y = Convert.ToDouble(Console.ReadLine());
 
+                if ((x - a) * (x - a) + (y - b) * (y - b) <= r * r)
+                {
+                    count++;
+                }
+            }
             // end
 
             return count;
@@ -18,7 +27,18 @@
             double length = 0;
 
             // code here
+            for (int i = 1; i <= n; i++)
+            {
+                double x = Convert.ToDouble(Console.ReadLine());
+                double y = Convert.ToDouble(Console.ReadLine());
+                double d = Math.Sqrt(x * x + y * y);
 
+                if (i == 1 || d < length)
+                {
+                    index = i;
+                    length = d;
+                }
+            }
             // end
 
             return (index, length);
@@ -28,7 +48,24 @@
             int count = 0;
 
             // code here
+            while (true)
+            {
+                double x, y;
 
+                if (!double.TryParse(Console.ReadLine(), out x))
+                {
+                    break;
+                }
+                if (!double.TryParse(Console.ReadLine(), out y))
+                {
+                    break;
+                }
+
+                if (x >= 0 && x <= Math.PI && y >= 0 && y <= Math.Sin(x))
+                {
+                    count++;
+                }
+            }
             // end
 
             return count;
@@ -38,7 +75,21 @@
             int score = 0;
 
             // code here
+            while (labs > 0 || cw > 0)
+            {
+                int mark = Convert.ToInt32(Console.ReadLine());
 
+                if (labs > 0)
+                {
+                    score += mark;
+                    labs--;
+                }
+                else
+                {
+                    score += 4 * mark;
+                    cw--;
+                }
+            }
             // end
 
             return score;
@@ -48,7 +99,18 @@
             double area = 0;
 
             // code here
-
+            switch (type)
+            {
+                case 1:
+                    area = (double)a * b;
+                    break;
+                case 2:
+                    area = Math.PI * Math.Abs((double)a * a - (double)b * b);
+                    break;
+                case 3:
+                    area = a / 2.0 * Math.Sqrt((double)b * b - a * a / 4.0);
+                    break;
+            }
             // end
 
             return area;
