@@ -1,0 +1,13 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/Lab3/.vs/Lab3/DesignTimeBuild
+/Lab3/.vs/Lab3/FileContentIndex
+/Lab3/obj/Debug/net8.0/refint
+/Lab3/obj/Debug/net8.0/ref
+/Lab3/obj/Debug/net8.0
+/Lab3/bin/Debug/net8.0
+/Lab3test
+/Lab3/.vs
+/Lab3/obj
