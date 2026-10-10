@@ -111,31 +111,18 @@ namespace Lab3
             double area = 0;
 
             // code here
-            if (type == 1)
-            {
-                area = a * b;
-            }
-            else if (type == 2)
-            {
-                if (a > b)
-                    {
-                    area = 3.14159265 * (a * a - b * b );
-                    }
-                else
-                {
-                    area = 3.14159265 * (b * b - a * a);
-                }
-            }
-            else if (type == 3)
-            {
-                double number = b * b - (a * a / 4.0);
-                double h = number / 2;
-                for (int i = 0; i < 100; i++)
-                {
-                    h = (h + number / h) / 2;
-                }
 
-                area = 0.5 * a * h;
+            switch (type)
+            {
+                case 1:
+                    area = a * b;
+                    break;
+                case 2: 
+                    area = Math.PI * Math.Abs (a * b - b * b);
+                    break;
+                case 3:
+                    area = 0.25 * a * Math.Sqrt(4.0 * b * b - a * a);
+                    break;
             }
             // end
 
