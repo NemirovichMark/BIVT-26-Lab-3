@@ -115,13 +115,20 @@ namespace Lab3
             switch (type)
             {
                 case 1:
-                    area = a * b;
+                    area = (double)a * b;
                     break;
                 case 2: 
-                    area = Math.PI * Math.Abs (a * b - b * b);
+                    area = Math.PI * Math.Abs ((double)a * b - (double)b * b);
                     break;
                 case 3:
-                    area = 0.25 * a * Math.Sqrt(4.0 * b * b - a * a);
+                    if (2.0 * b > a && a > 0 && b > 0)
+                    {
+                        area = 0.25 * a * Math.Sqrt(4.0 * b * b - (double)a * a);
+                    }
+                    else
+                    {
+                        area = 0.0;
+                    }
                     break;
             }
             // end
