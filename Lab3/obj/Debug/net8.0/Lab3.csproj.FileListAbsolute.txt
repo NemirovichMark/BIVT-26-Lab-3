@@ -1,0 +1,15 @@
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/bin/Debug/net8.0/Lab3
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/bin/Debug/net8.0/Lab3.deps.json
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/bin/Debug/net8.0/Lab3.runtimeconfig.json
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/bin/Debug/net8.0/Lab3.dll
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/bin/Debug/net8.0/Lab3.pdb
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/Lab3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfoInputs.cache
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/Lab3.AssemblyInfo.cs
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/Lab3.csproj.CoreCompileInputs.cache
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/Lab3.sourcelink.json
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/Lab3.dll
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/refint/Lab3.dll
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/Lab3.pdb
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/Lab3.genruntimeconfig.cache
+/Users/macbook/Desktop/BIVT-26-Lab-3/Lab3/obj/Debug/net8.0/ref/Lab3.dll
