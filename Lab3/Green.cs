@@ -29,7 +29,7 @@
             double length = 0;
 
             // code here
-            double min = 10000000;
+            double min = 100000000;
             for (int i = 0; i < n; i++)
             {
                 double x = double.Parse(Console.ReadLine());
