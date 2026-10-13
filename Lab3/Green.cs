@@ -24,7 +24,7 @@
             {
                 double x = double.Parse(Console.ReadLine());
                 double y = double.Parse(Console.ReadLine());
-                result = Math.Sqrt(x * x + y * y)
+                double result = Math.Sqrt(x * x + y * y)
                 if (result < length || length == 0)
                 {
                     index = i;
@@ -91,7 +91,7 @@
                     area = a * b;
                     break;
                 case 2:
-                    area = Math.Abs(Math.PI * a * a - MathPI * b * b);
+                    area = Math.Abs(Math.PI * a * a - Math.PI * b * b);
                     break;
                 case 3:
                     area = 0.5 * a * Math.Sqrt(b * b - (a / 2.0) * (a / 2.0));
