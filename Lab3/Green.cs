@@ -11,7 +11,10 @@
                 double y = double.Parse(Console.ReadLine()); // Console.ReadLine не то(((
                 double dist = Math.Sqrt((x - a) * (x - a) + (y - b) * (y - b));
                 if ( dist <= r)
+                {
                     count++;
+                }
+    
             }
                 
             return count;
