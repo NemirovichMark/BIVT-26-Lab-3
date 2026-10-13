@@ -30,7 +30,7 @@
                     index = i;
                     length = result;
                 }
-                
+            }
             return (index, length);
         }
         public int Task3()
@@ -57,7 +57,6 @@
                     count++;
                 }
             }
-                
             return count;
         }
         public int Task4(int labs, int cw)
