@@ -27,7 +27,7 @@
             {
                 double x = double.Parse(Console.ReadLine());
                 double y = double.Parse(Console.ReadLine());
-                double result = Math.Sqrt(x * x + y * y)
+                double result = Math.Sqrt(x * x + y * y);
                 if (result < length || length == 0)
                 {
                     index = i;
