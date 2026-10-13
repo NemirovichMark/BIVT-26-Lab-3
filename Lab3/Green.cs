@@ -47,8 +47,8 @@
                 double x;
                 double y;
 
-                bool isXnum = double.TryParse(strX; out x);
-                bool isYnum = double.TryParse(strY; out y);
+                bool isXnum = double.TryParse(strX, out x);
+                bool isYnum = double.TryParse(strY, out y);
 
                 if (!isXnum || !isYnum)
                 {
