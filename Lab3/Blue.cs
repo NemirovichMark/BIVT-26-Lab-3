@@ -49,15 +49,16 @@ namespace Lab3
 
             for (int i = 0; i < n; i++)
             {
+
                 string[] g = Console.ReadLine().Split();
-                bool o = true;
-                for (int j = 0; j < 4; j++)
+                int gr1 = int.Parse(g[0]);
+                int gr2 = int.Parse(g[1]);
+                int gr3 = int.Parse(g[2]);
+                int gr4 = int.Parse(g[3]);
+                if (gr1>= 4 && gr2 >= 4 && gr3 >= 4 && gr4 >= 4)
                 {
-                    int gr = int.Parse(g[j]);
-                    if (gr == 2 || gr == 3)
-                        o = false;
+                    count++;
                 }
-                if (o) count++;
             }
             // end
 
