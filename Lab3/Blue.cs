@@ -1,4 +1,6 @@
-﻿namespace Lab3
+﻿using System.Diagnostics;
+
+namespace Lab3
 {
     public class Blue
     {
@@ -102,41 +104,35 @@
         {
 
             // code here
-            if (number == 1)
+            switch (number)
             {
-                power += 10;
-                intellect -= 5;
-            }
-            if (number == 2)
-            {
-                power -= 5;
-                agility += 5;
-                intellect -= 5;
-            }
-            if (number == 3)
-            {
-                power += 10;
-                intellect -= 5;
-            }
-            if (number == 4)
-            {
-                power -= 10;
-                intellect -= 10;
-                agility += 15;
-            }
-            if (number == 5)
-            {
-                power -= 5;
-                intellect += 7;
+                case 1:
+                    power += 10;
+                    intellect -= 5;
+                    break;
+                case 2:
+                    power -= 5;
+                    agility += 5;
+                    intellect -= 5;
+                    break;
+                case 3:
+                    power += 10;
+                    intellect -= 5;
+                    break;
+                case 4:
+                    power -= 10;
+                    intellect -= 10;
+                    agility += 15;
+                    break;
+                case 5:
+                    power -= 5;
+                    intellect += 7;
+                    break;
             }
 
-
-            if (power < 0)
-                power = 0;
-            if (agility < 0)
-                agility = 0;
-            if (intellect < 0)
-                intellect = 0;
+            if (power < 0) power = 0;
+            if (agility < 0) agility = 0;
+            if (intellect < 0) intellect = 0;
             // end
 
             return (power, agility, intellect);
