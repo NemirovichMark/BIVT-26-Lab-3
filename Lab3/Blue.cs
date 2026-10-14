@@ -1,4 +1,4 @@
-﻿namespace Lab3
+namespace Lab3
 {
     public class Blue
     {
@@ -9,13 +9,13 @@
             // code here
             for (int i = 1; i <= n; i++)
             {
-                double a = double.Parse(Console.ReadLine());
+                double a = double.Parse(Console.ReadLine()!);
                 if (a < norma)
                 {
                     milk += glass;
                 }
             }
-            milk /= 1000;
+            milk /= 1000.0;
             // end
 
             return milk;
@@ -27,8 +27,8 @@
             // code here
             for (int i = 1; i <= n; i++)
             {
-                double x = double.Parse(Console.ReadLine());
-                double y = double.Parse(Console.ReadLine());
+                double x = double.Parse(Console.ReadLine()!);
+                double y = double.Parse(Console.ReadLine()!);
                 if (x > 0 && y > 0) { first++; }
                 else if (x < 0 && y > 0) { second++; }
                 else if (x < 0 && y < 0) { third++; }
@@ -45,10 +45,10 @@
             // code here
             for (int i = 1; i <= n; i++)
             {
-                int m1 = int.Parse(Console.ReadLine());
-                int m2 = int.Parse(Console.ReadLine());
-                int m3 = int.Parse(Console.ReadLine());
-                int m4 = int.Parse(Console.ReadLine());
+                int m1 = int.Parse(Console.ReadLine()!);
+                int m2 = int.Parse(Console.ReadLine()!);
+                int m3 = int.Parse(Console.ReadLine()!);
+                int m4 = int.Parse(Console.ReadLine()!);
                 if ((m1 != 2) && (m2 != 2) && (m3 != 2) && (m4 != 2) && (m1 != 3) && (m2 != 3) && (m3 != 3) && (m4 != 3))
                 {
                     count++;
@@ -73,9 +73,12 @@
                     taskTime += 5;
                     tasks--;
                 }
-                seriasTime = int.Parse(Console.ReadLine());
-                time += seriasTime;
-                serias++;
+                else
+                {
+                    seriasTime = int.Parse(Console.ReadLine()!);
+                    time += seriasTime;
+                    serias++;
+                }
             }
             // end
 
