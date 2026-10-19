@@ -114,6 +114,9 @@ namespace Lab3
                     power -= 5;
                     break;
             }
+            if (power < 0) power = 0;
+            if (agility < 0) agility = 0;
+            if (intellect < 0) intellect = 0;
             // end
 
             return (power, agility, intellect);
